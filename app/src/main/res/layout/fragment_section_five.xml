@@ -8,4 +8,15 @@
         android:id="@+id/txt_header"
         android:text="@string/hello_blank_fragment" />
 
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Seccion1"
+        android:id="@+id/button3"
+        android:layout_gravity="center"
+
+        android:onClick="clickFunc5"
+
+        />
+
 </FrameLayout>

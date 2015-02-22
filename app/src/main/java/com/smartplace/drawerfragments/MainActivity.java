@@ -17,6 +17,7 @@ import android.view.ViewGroup;
 import android.support.v4.widget.DrawerLayout;
 import android.widget.ArrayAdapter;
 import android.widget.TextView;
+import android.widget.Toast;
 
 
 public class MainActivity extends Activity
@@ -152,6 +153,110 @@ public class MainActivity extends Activity
 
         return super.onOptionsItemSelected(item);
     }
+
+
+    public void clickFunc(View view){
+
+
+        FragmentManager fragmentManager = getFragmentManager();
+
+        mTitle = getString(R.string.title_section2);
+
+        ActionBar actionBar = getActionBar();
+        actionBar.setDisplayShowTitleEnabled(true);
+        actionBar.setTitle(mTitle);
+
+        mCurrentFragment = SectionTwoFragment.newInstance(1);
+
+        fragmentManager.beginTransaction()
+                .replace(R.id.container, mCurrentFragment)
+                .commit();
+
+        //Toast.makeText(MainActivity.this, "Button Clicked", Toast.LENGTH_SHORT).show();
+    }
+
+    public void clickFunc2(View view){
+
+
+        FragmentManager fragmentManager = getFragmentManager();
+
+        mTitle = getString(R.string.title_section3);
+
+        ActionBar actionBar = getActionBar();
+        actionBar.setDisplayShowTitleEnabled(true);
+        actionBar.setTitle(mTitle);
+
+        mCurrentFragment = SectionThreeFragment.newInstance(2);
+
+        fragmentManager.beginTransaction()
+                .replace(R.id.container, mCurrentFragment)
+                .commit();
+
+        //Toast.makeText(MainActivity.this, "Button Clicked", Toast.LENGTH_SHORT).show();
+    }
+
+    public void clickFunc3(View view){
+
+
+        FragmentManager fragmentManager = getFragmentManager();
+
+        mTitle = getString(R.string.title_section4);
+
+        ActionBar actionBar = getActionBar();
+        actionBar.setDisplayShowTitleEnabled(true);
+        actionBar.setTitle(mTitle);
+
+        mCurrentFragment = SectionFourFragment.newInstance(3);
+
+        fragmentManager.beginTransaction()
+                .replace(R.id.container, mCurrentFragment)
+                .commit();
+
+        //Toast.makeText(MainActivity.this, "Button Clicked", Toast.LENGTH_SHORT).show();
+    }
+
+
+    public void clickFunc4(View view){
+
+
+        FragmentManager fragmentManager = getFragmentManager();
+
+        mTitle = getString(R.string.title_section5);
+
+        ActionBar actionBar = getActionBar();
+        actionBar.setDisplayShowTitleEnabled(true);
+        actionBar.setTitle(mTitle);
+
+        mCurrentFragment = SectionFiveFragment.newInstance(4);
+
+        fragmentManager.beginTransaction()
+                .replace(R.id.container, mCurrentFragment)
+                .commit();
+
+        //Toast.makeText(MainActivity.this, "Button Clicked", Toast.LENGTH_SHORT).show();
+    }
+
+
+    public void clickFunc5(View view){
+
+
+        FragmentManager fragmentManager = getFragmentManager();
+
+        mTitle = getString(R.string.title_section1);
+
+        ActionBar actionBar = getActionBar();
+        actionBar.setDisplayShowTitleEnabled(true);
+        actionBar.setTitle(mTitle);
+
+        mCurrentFragment = SectionOneFragment.newInstance(0);
+
+        fragmentManager.beginTransaction()
+                .replace(R.id.container, mCurrentFragment)
+                .commit();
+
+        //Toast.makeText(MainActivity.this, "Button Clicked", Toast.LENGTH_SHORT).show();
+    }
+
 
     /**
      * The place holder provided by default here shall be removed
